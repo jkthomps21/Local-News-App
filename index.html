@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="assets/style.css" />
+
+    <title>Local News</title>
+
+</head>
+
+<body>
+    <header>
+        <!-- Navigation -->
+        <nav class="nav-extended red lighten-2">
+            <div class="nav-wrapper">
+                <!-- Top Logo -->
+                <a class="brand-logo center">Local News</a>
+                <!-- This will hide the hamburger menu icon on medium screens and larger -->
+                <a href="#" data-target="slide-out1" class="sidenav-trigger show-on-large">
+                    <i class="material-icons">menu</i>
+                </a>
+                <div class="right" id="refresh-button"><i class="material-icons">refresh</i></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- This is the search slide out -->
+        <aside class="container">
+            <ul id="slide-out1" class="sidenav center-align">
+
+                <!-- This is the filter menu -->
+                <section class="row side-decor">
+                    <div class="col s12">
+                        <h5>Filters</h5>
+                    </div>
+                </section>
+                <div class="divider"></div>
+                <section class="row side-decor">
+                    <div class="col s12">
+                        <form>
+                            <p>Refine Search Results</p>
+                            <div class="input-field" style="margin-bottom: 0px;">
+                                <input id="search">
+                                <i class="material-icons">search</i>
+                            </div>
+                        </form>
+                    </div> 
+                </section>
+                <div class="divider"></div>
+
+                <!-- This is the first switch -->
+                <section id="distance-switch" class="row">
+                    <div class="col s12">
+                        <div class="switch">
+                            <p>Distance</p>
+                            <label>
+                                Narrow
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Broad
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <!-- This is the second switch -->
+                <section id="time-switch" class="row">
+                    <div class="col s12">
+                        <div class="switch">
+                            <p>Time Period</p>
+                            <label>
+                                This Week
+                                <input type="checkbox">
+                                <span class="lever"></span>
+                                Last Week
+                            </label>
+                        </div>
+                    </div>
+                </section>
+                <div class="divider"></div>
+            </ul>
+        </aside>
+
+        <!-- These are the cards (articles) -->
+        <article class="row">
+            <br>
+            <div class="col s12" id="article-container">
+                <!-- Template Card -->
+
+                <a class="card horizontal hoverable" id="template" tabindex="0" href="" target="_blank">
+                   
+                    <figure class="card-image">
+                        <img class="article-image" src="https://bearmarketreview.files.wordpress.com/2013/06/crowd028a1.jpg">
+                    </figure>
+                    <!-- Card Container-->   
+                    <div class="card-stacked">
+                        <div class="card-content">
+                            <h4 class="header">Local News</h4>
+                            <p class="date"></p>
+                            <p class="description">Important info vital to being an informed member of your community.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </article>
+    </main>
+
+    <footer class="page-footer red lighten-2">
+        <div class="container">
+            <p class="white-text center">Powered by GNews.io and GeoJS</p>
+        </div>
+        <div class="footer-copyright red lighten-1">
+            <div class="container">
+                @ 2020 Copyright
+                <div id="search-key" class="grey-text text-lighten-4 right"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

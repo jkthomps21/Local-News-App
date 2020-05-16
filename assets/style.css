@@ -1,0 +1,149 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+nav {
+    padding: 5px 0px;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+a {
+    color: black;
+}
+
+footer {
+    flex-shrink: 0;
+    padding: 0 !important;
+}
+
+#search-key {
+    margin-right: 32px;
+}
+
+#refresh-button {
+    margin: 0px 25px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+
+#refresh-button:hover {
+    transform: rotate(45deg);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    transition-property: transform;
+}
+
+/*
+========================
+Navigation Styles
+========================
+*/
+
+.side-decor {
+    margin-top: 10px;
+}
+
+.input-field {
+    margin-top: 0px;
+    padding: 0px 20px 0px 40px;
+}
+
+.input-field i{
+    position:absolute;
+    top: 14px;
+    left: 10px;
+}
+
+.lever {
+    background-color: #1de9b6 !important;
+}
+
+.lever:after {
+    background-color: #00bfa5 !important;
+}
+
+/*
+========================
+Card Formatting Styles
+========================
+*/
+
+#template {
+    display: none;
+}
+
+.card {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-image {
+    margin: 20px 0px 20px 20px;
+}
+
+.article-image {
+    height: 200px;
+    width: 200px !important;
+    object-fit: cover;
+}
+
+.card-content {
+    padding-top: 20px !important; 
+}
+
+.header {
+    margin-top: 0px !important;
+}
+
+.title {
+    display: inline-block;
+}
+
+/*
+========================
+Typography
+========================
+*/
+
+.date {
+    font-weight: 150;
+    margin-bottom: 10px !important;
+}
+
+/*
+========================
+Responsive Media
+========================
+*/
+
+@media screen and (max-width: 992px) {
+    h4 {
+        font-size: 1.9rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h4 {
+        font-size: 1.5rem;
+    }
+    .card {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card-image {
+        max-width: 100% !important;
+        margin: 20px 20px 0px 20px;
+    }
+    .article-image {
+        height: 50vw;
+        width: 100% !important;
+    }
+    .card-content {
+        padding: 0px;
+    }
+}
